@@ -13,7 +13,6 @@ public class Ejercicio9{
     System.out.println("         | |    | o  |   | |");
     System.out.println("         | |    |  []| ");
     System.out.println("_____  __  __ ___________   __________");
-    
-    
+      
   }
 }

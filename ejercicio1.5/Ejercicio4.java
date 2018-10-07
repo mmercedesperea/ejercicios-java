@@ -1,5 +1,5 @@
 public class Ejercicio4{
-  public static void main (String arg[]){
+  public static void main (String [] args){
     System.out.println("Lunes\tMartes\tMierc.\tJueves\tViernes");
     System.out.println("------\t------\t------\t------\t-------");
     System.out.println("SINF\tPROG\tEED\tEED\tSINF");

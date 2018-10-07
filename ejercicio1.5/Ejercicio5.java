@@ -9,8 +9,6 @@ public class Ejercicio5{
     String blanco = "\033[37m";
     String celeste = "\033[36m";
     
-    
-    
     System.out.println(morado + "Lunes\tMartes\tMierc.\tJueves\tViernes");
     System.out.println(blanco + "------\t------\t------\t------\t-------");
     System.out.println(rojo + "SINF"+ verde + "\tPROG"+ naranja + "\tEED\tEED"+ rojo + "\tSINF");
