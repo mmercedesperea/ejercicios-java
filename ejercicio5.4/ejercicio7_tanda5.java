@@ -12,13 +12,15 @@ public class ejercicio7_tanda5 {
     int intento;
     int contador=0;
     boolean adivinado=false;
+    System.out.print("Vamos a abrir la siguiente caja fuerte, para ello introduce un numero de cuatro cifras, tienes cuatro oportunidades\n");
     
     do {
-      System.out.print("Vamos a abrir la siguiente caja fuerte, para ello introduce un numero de cuatro cifras, tienes cuatro oportunidades");
       intento = Integer.parseInt(System.console().readLine());
         if (intento == numeroCaja){
           adivinado=true;
-          }
+          }else{
+          System.out.print("Lo siento, esa no es la combinacion\n");
+        }
       contador ++;
 
       } while ((adivinado == false) && (contador<maxIntento));
@@ -26,11 +28,8 @@ public class ejercicio7_tanda5 {
         if (adivinado==true){
           System.out.print("La caja fuerte se ha abierto satisfactoriamente ");
           }else{
-           System.out.print("Lo siento la caja se ha bloqueado ");
+           System.out.print("La caja se ha bloqueado ");
           }
-  
-  
-  
-  
+
 }
 }
