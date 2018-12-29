@@ -2,7 +2,7 @@
  * Ejercicios del 20 al 28
  */
 
-
+import funciones.funciones_array;
 public class ejercicios_20_28_funciones {
 	
 	public static void main (String[] args) {
