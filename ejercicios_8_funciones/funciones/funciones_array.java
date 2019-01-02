@@ -123,21 +123,122 @@ public class funciones_array {
           }
           return a;
         
-        
-        
         }
-  
         
+        //_--------------------------------------------------------------------------FILTRA PRIMOS
+    //sacar primos
     
-    
-}
+    public static int[] filtraPrimos(int x[]) {
+    int [] primosaux =new int[x.length]; 
+    int contador=0;
   
-  
+    for (int i=0; i <x.length; i ++) { 
+      boolean primo =true;
+        for (int n=2; n <x[i]&& primo==true; n ++) {
+          if ((x[i] % n)==0){  //Esto hace que se compruebe que el numero dividido entre i el resto es 0 primo sera false.
+          primo=false;
+          }
+        }
+        if((primo==true)&&(x[i]!=1)){
+          primosaux[contador] =x[i];
+          contador ++;
+          } 
+      }
+      
+        if (contador>0){
+          int [] primos =new int[contador];
+          for(int p=0;p<contador;p++){
+        primos[p]=primosaux[p];
+        }
+      return primos;
+        }else{
+          int [] primos =new int[1];
+        primos[0]=-1;
+      return primos;
+      }
+       
+    }
+    //_---------------------------------------------------------------------------//FILTRA CAPICUAS
+    //devuelve capicuas
     
+    public static int[] filtraCapicuas(int x[]){
+      
+      int [] capiaux =new int[x.length]; 
+      int contador=0;
+      int numeroIndividual=0;
+      int volteado=0;
+      
+      for(int i=0;i<x.length;i++){
+        numeroIndividual=x[i];
+        volteado=voltea(numeroIndividual);
+        if (numeroIndividual==volteado){
+          capiaux[contador]=numeroIndividual;
+          contador++;
+          }
+        }
+        
+        if (contador>0){
+          int [] capicuos =new int[contador]; 
+          for(int i=0;i<contador;i++){
+         capicuos[i]=capiaux[i];
+         }
+      return capicuos;
+        }else{
+          int [] capicuos =new int[1]; 
+        capicuos[0]=-1;
+      return capicuos;
+      }
+    }
+      //----------------------------------------------------------------------------------VUELTA A UN NUMERO
+
+     //da la vuelta a un numero
+    public static int voltea(int x) {
+      if (x < 0) {
+        return -voltea(-x);
+        }
+      int volteado = 0;
+      while(x > 0) {
+          volteado = (volteado * 10) + (x % 10);
+          x = x / 10;
+        }
+      return volteado;
+    }
  
-    
-    
-		
-	
-
-
+ //---------------------------------------------------------------------------------FILTRA 7
+    //Filtra numeros 7  
+    public static int[] filtraCon7(int x[]) {
+      int numeroIndividual=0;
+      int [] arrayaux =new int[x.length]; 
+      int contador=0;
+      boolean siete=true;
+      
+      //filtramos los numeros para sacar los que contengan 7 
+      for(int i=0;i<x.length;i++){
+        siete=true;
+        numeroIndividual=x[i];
+        int numeroaux=numeroIndividual;
+        int numeroredu=numeroIndividual;
+        while(numeroredu>0){
+          numeroaux=numeroredu%10;
+          numeroredu=numeroredu/10;
+            if ((numeroaux==7)&&(siete==true)){
+              arrayaux[contador]=x[i];
+              contador++;
+              siete=false;
+              }
+        }
+      }
+      if (contador>0){
+      int [] array7 =new int[contador];
+      for(int i=0;i<contador;i++){
+        array7[i]=arrayaux[i];
+        }
+      return array7;
+        }else{int [] array7 =new int[1];
+        array7[0]=-1;
+      return array7;
+      }
+       
+    }
+     
+}

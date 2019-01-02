@@ -32,6 +32,7 @@ public class Varias {
 
      //da la vuelta a un numero
   public static long voltea(long x) {
+    
     if (x < 0) {
       return -voltea(-x);
       }

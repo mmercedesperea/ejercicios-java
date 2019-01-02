@@ -36,16 +36,16 @@ public class Ejercicio_35 {
     public static String convierteEnPalotes(int n) {    
       n = (int)voltea(n);   
      
+     //para almacenar los numeros enteros originales por separado en un array
       int[] xarrayaux = new int[1000];                         // creamos un array auxiliar
       int i=0;   
-     
       while(n>0){                                              // vamos a pasar el numero original a un array
          xarrayaux[i]=n%10;                                   // vamos almacenando el ultimo digito del array en las primeras posiciones del array
          n=n/10;                                              // vamos acortando el numero original quitandole numeros por la cola 
-         i++;                                                 //vamos almacenando contadores que nos sirvan para saber el numero d edigitos que tiene nuestro numero base
+         i++;                                                 //vamos almacenando contadores que nos sirvan para saber el numero de digitos que tiene nuestro numero base
        }
-      int[] xarray = new int[i];                          
-      
+      int[] xarray = new int[i];    
+                            
       //guardamos el resultado anterior en un array con las dimensiones que necesitamos 
       for(int l=0;l<i;l++){
         xarray[l]=xarrayaux[l];
