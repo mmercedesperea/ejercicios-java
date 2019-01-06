@@ -22,14 +22,12 @@ public class ejercicio_refuerzo_6 {
 	public static void main (String[] args) {
      int [] array= creaYRellena();
      
-      int [] array2= invierteVector(array);
- 
-       for(int i=0;i<array2.length;i++){
-    System.out.print(array2[i]);
-  }
+      invierteVector(array);
+  
   }
 	
   //--------------------FUNCIONES----------------------------------------------
+  
   
   public static int[] creaYRellena (){
     System.out.println("Deme el tamaño del array con el que quiere trabajar");
@@ -50,8 +48,8 @@ public class ejercicio_refuerzo_6 {
   
     }
     
+    public static void invierteVector (int[] vector){
     
-    public static int[] invierteVector (int[] vector){
       int contador=0;
       int aux=0;
       
@@ -59,7 +57,7 @@ public class ejercicio_refuerzo_6 {
         contador++;
         }
      
-//Para dar la vuelta al array sin usar otro array
+                  //Para dar la vuelta al array sin usar otro array
       for(int i=0;i<vector.length/2;i++){
         int aux1=vector[i];
         int aux2=vector[contador];
@@ -67,9 +65,12 @@ public class ejercicio_refuerzo_6 {
         vector[i]=aux2;
         contador--;
         }
-
-      return vector;
+        System.out.println();
+         for(int i=0;i<vector.length;i++){
+    System.out.print(vector[i]+ " ");
+      
       }
+    }
   
 }
 
